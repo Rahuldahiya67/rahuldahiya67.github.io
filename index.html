@@ -89,8 +89,6 @@
   .q-text { font-size: 1.12rem; font-weight: 500; min-height: 1.6em; }
   .caret { display: inline-block; width: 2px; height: 1.1em; background: var(--road); vertical-align: -3px; margin-left: 2px; animation: blink 1s steps(1) infinite; }
   @keyframes blink { 50% { opacity: 0; } }
-  .q-sql { margin: 14px 0 4px; color: var(--muted); font-size: .86rem; line-height: 1.45; opacity: 0; transition: opacity .4s; }
-  .q-sql b { color: var(--road); font-weight: 600; }
   .bars { margin: 14px 0 0; display: grid; gap: 10px; }
   .bar { display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 12px; font-size: .95rem; }
   .bar .track { display: block; height: 14px; background: var(--road-soft); border-radius: 4px; overflow: hidden; }
@@ -101,7 +99,7 @@
   .q-foot { margin-top: 14px; display: flex; justify-content: space-between; gap: 12px; font-size: .85rem; color: var(--muted); flex-wrap: wrap; }
   .q-foot a { color: var(--road); font-weight: 600; text-decoration: none; }
   .q-foot a:hover { text-decoration: underline; }
-  .shown .q-sql, .shown .q-answer { opacity: 1; }
+  .shown .q-answer { opacity: 1; }
 
   /* ---------- sections ---------- */
   section { padding: 72px 0; border-top: 1px solid var(--line); }
@@ -163,7 +161,7 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .caret { animation: none; }
-    .bar .fill, .q-sql, .q-answer { transition: none; }
+    .bar .fill, .q-answer { transition: none; }
     .btn:hover { transform: none; }
   }
 </style>
@@ -205,7 +203,6 @@
           <span class="who" aria-hidden="true">You</span>
           <div class="q-text"><span id="typed">Revenue by region in 2025</span><span class="caret" id="caret" aria-hidden="true"></span></div>
         </div>
-        <p class="q-sql" id="sql"><b>SELECT</b> r.name, <b>SUM</b>(oi.quantity * oi.unit_price) <b>AS</b> revenue <b>FROM</b> orders o <b>JOIN</b> … <b>GROUP BY</b> 1 <b>ORDER BY</b> revenue <b>DESC</b></p>
         <div class="bars" id="bars">
           <div class="bar"><span>North</span><span class="track"><span class="fill" data-w="100"></span></span><span class="val">Rs 67.38 Cr</span></div>
           <div class="bar"><span>West</span><span class="track"><span class="fill" data-w="62.8"></span></span><span class="val">Rs 42.31 Cr</span></div>
@@ -317,7 +314,7 @@
           <span class="when">June 2026 to now</span>
           <h3>Business Intelligence Executive <span class="org">at Servotech Renewable Power System</span></h3>
           <ul>
-            <li>Own the dispatch MIS for a multi-plant manufacturer, from raw SAP data to the reports management reviews every day.</li>
+            <li>Own dispatch data and reporting for a multi-plant manufacturer, from raw SAP data to the reports management reviews every day.</li>
             <li>Built a Python ETL pipeline that brings SAP exports and operational trackers into one SQL database of 1 lakh+ records.</li>
             <li>Automated the dispatch approval process with Apps Script and the Sheets, Drive and Gmail APIs, and rebuilt the Power BI dispatch model.</li>
           </ul>
@@ -395,7 +392,7 @@
     try { localStorage.setItem('theme', root.dataset.theme); } catch {}
   });
 
-  // The one orchestrated moment: the question types, the SQL appears, the bars fill.
+  // The one orchestrated moment: the question types, then the bars fill.
   const panel = document.getElementById('query');
   const fills = panel.querySelectorAll('.fill');
   const show = () => { panel.classList.add('shown'); fills.forEach(f => (f.style.width = f.dataset.w + '%')); };

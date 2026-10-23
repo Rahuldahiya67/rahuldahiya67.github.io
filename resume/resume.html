@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rahul Dahiya - Resume</title>
+<meta name="author" content="Rahul Dahiya">
+<!--
+  Source of assets/Rahul_Dahiya_Resume.pdf. Edit this file, then run resume/build.sh.
+  Lab projects live between the LAB-PROJECTS markers below; keep the resume to two A4 pages.
+-->
+<style>
+  @page { size: A4; margin: 36pt 36pt 34pt 36pt; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: Carlito, Calibri, sans-serif; font-size: 10.5pt; line-height: 1.24; color: #000; }
+  a { color: inherit; text-decoration: none; }
+  header { text-align: center; }
+  h1 { margin: 0; font-size: 18pt; font-weight: 700; letter-spacing: .02em; line-height: 1.1; }
+  .tagline { margin-top: 3pt; color: #444; }
+  .tagline .sep, .head .sep { margin: 0 6pt; font-weight: 400; }
+  .contact { margin-top: 3pt; display: flex; justify-content: center; gap: 13pt; }
+  .contact span { display: inline-flex; align-items: center; gap: 3pt; }
+  .contact svg { width: 9pt; height: 9pt; }
+  h2 { margin: 11pt 0 5pt; padding-bottom: 2pt; border-bottom: .75pt solid #000; font-size: 11pt; font-weight: 700; text-transform: uppercase; }
+  h2 { break-after: avoid; }
+  p { margin: 0; }
+  .entry { margin-bottom: 6pt; break-inside: avoid-page; }
+  .head { display: flex; justify-content: space-between; gap: 10pt; }
+  .head .title { font-weight: 700; }
+  .head .title .org, .head .title .note { font-weight: 400; }
+  .head .right { white-space: nowrap; }
+  .sub { font-style: italic; color: #333; }
+  ul { margin: 1pt 0 0; padding-left: 15pt; }
+  li { margin: 0; padding-left: 1pt; }
+  li::marker { font-size: 10pt; }
+  .gh-link { display: inline-flex; align-items: center; gap: 3pt; }
+  .gh-link svg { width: 9pt; height: 9pt; }
+  .skills p { margin-bottom: 1pt; }
+  .skills b { font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <h1>RAHUL DAHIYA</h1>
+  <div class="tagline">Data &amp; BI Analyst<span class="sep">|</span>Python, SQL, Power BI<span class="sep">|</span>GenAI Applications</div>
+  <div class="contact">
+    <span><svg viewBox="0 0 24 24"><path fill="#000" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>New Delhi, India</span>
+    <span><svg viewBox="0 0 24 24"><path fill="#000" d="M2 5h20v14H2z" opacity="0"/><path fill="#000" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L4.6 7h14.8L12 12.2Z"/></svg><a href="mailto:rahuldahiya67@gmail.com">rahuldahiya67@gmail.com</a></span>
+    <span><svg viewBox="0 0 24 24"><path fill="#000" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm-9 10a9 9 0 0 1 18 0Z"/></svg><a href="https://www.linkedin.com/in/rahul-dahiya-466323165">LinkedIn</a></span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg><a href="https://github.com/rahuldahiya67">GitHub</a></span>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p>Data and BI analyst with 2+ years across supply chain and transportation analytics. I build Python and SQL pipelines, Power BI models, and API automations over 1 lakh+ records of SAP and operational data, and at a multi-plant manufacturer these replaced manual daily reporting with automated data reporting used in management reviews. Now applying the same data foundation to GenAI systems: RAG, text-to-SQL, and tool-calling agents built with FastAPI and MongoDB.</p>
+
+<h2>Experience</h2>
+<div class="entry">
+  <div class="head"><span class="title">Business Intelligence Executive<span class="sep">|</span><span class="org">Servotech Renewable Power System Ltd.</span></span><span class="right">Jun 2026 – Present</span></div>
+  <div class="sub">Supply chain and logistics analytics for a multi-plant manufacturer</div>
+  <ul>
+    <li>Replaced manual spreadsheet consolidation with a Python ETL pipeline that loads SAP billing and sales exports and operational trackers into a SQL database, standardising 1 lakh+ dispatch, billing, and freight records into one source for reporting and reconciliation.</li>
+    <li>Own dispatch data and reporting end to end, delivering daily planned-vs-actual, same-day freeze plan, and next-day plan reports that senior management uses to track dispatch performance and follow up on held orders.</li>
+    <li>Removed daily manual data entry from the dispatch approval process by automating it with Google Apps Script and the Sheets, Drive, and Gmail APIs, including rule-based live sync, multi-source lookups for missing vehicle, freight, and distance data, and auto-created evidence folders.</li>
+    <li>Rebuilt the Power BI dispatch model (Power Query, DAX) on ~20,000 rows of dispatch history with live source connections, giving management one view of dispatch value, freight cost per order, transporter performance, and plan adherence.</li>
+    <li>Standardised dispatch KPI definitions, including on-plan versus rescheduled dispatch with holiday rules and hold-reason tracking, so plant and sales teams report against the same numbers.</li>
+    <li>Led data reconciliation for a full finished-goods store audit, matching physical counts across racks, floors, and outdoor storage to system stock and delivering an item-wise variance report signed off by store management.</li>
+    <li>Leading the design of an in-house Transport Management System and supporting management in evaluating a commercial TMS vendor.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="head"><span class="title">Business Analyst<span class="sep">|</span><span class="org">BT Data and Surveying India Pvt. Ltd.</span></span><span class="right">Oct 2024 – May 2026</span></div>
+  <div class="sub">Transportation analytics and client reporting</div>
+  <ul>
+    <li>Cut manual effort in client reporting by automating preprocessing and validation of large-scale traffic count data with Python and SQL.</li>
+    <li>Built ETL pipelines that cleaned, transformed, and standardised high-volume transportation datasets, giving analysts consistent inputs across client projects.</li>
+    <li>Improved data quality and reporting accuracy by designing rule-based anomaly detection checks that flagged bad records before delivery.</li>
+    <li>Developed Power BI dashboards for traffic trends, KPI monitoring, and peak-hour analysis used in client deliverables.</li>
+    <li>Built trend forecasting models on traffic patterns to support transportation planning studies.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="head"><span class="title">Software Engineer Intern<span class="sep">|</span><span class="org">Tata Elxsi, Bengaluru</span></span><span class="right">Feb 2024 – Jun 2024</span></div>
+  <div class="sub">Data engineering and analytics</div>
+  <ul>
+    <li>Gave operations teams live data visibility by designing and deploying REST APIs and real-time dashboards.</li>
+    <li>Reduced query execution time under high load by optimising SQL queries and backend workflows.</li>
+    <li>Contributed to containerised data processing pipelines using Docker and Kubernetes.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+<div class="entry">
+  <div class="head"><span class="title">Plant Logistics Automation Suite</span><span class="right">Ongoing</span></div>
+  <div class="sub">Google Apps Script, Google Sheets, HTML web app, Power BI, SAP exports</div>
+  <ul>
+    <li>Designing an in-house TMS for a plant handling 10–30 dispatches a day, covering the flow from SAP sales order and stock and payment checks through vehicle placement, invoicing, LR, and e-way bill.</li>
+    <li>Built a transporter e-bidding module that sends trip details to selected transporters by email and one-click WhatsApp, collects quotes through a web form, and shortlists the lowest bid, replacing manual freight requests over WhatsApp.</li>
+    <li>Engineered around SAP GUI-only access (no API or OData) using structured exports and a central transporter master, on zero-cost Google Workspace tooling.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="head"><span class="title">Enterprise Knowledge Assistant <span class="note">(production RAG with evaluation)</span></span><a class="right gh-link" href="https://github.com/rahuldahiya67/enterprise-knowledge-assistant"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>GitHub</a></div>
+  <div class="sub">Python, OpenAI / Claude API, MongoDB Atlas Vector Search, BM25, FastAPI, Docker, GitHub Actions</div>
+  <ul>
+    <li>Built a cited-answer assistant over company policies and SOPs using hybrid retrieval (vector + BM25 keyword search, Reciprocal Rank Fusion, re-ranking) with metadata filters pushed into MongoDB Atlas $vectorSearch.</li>
+    <li>Designed a 30-question evaluation suite covering hit rate, MRR, answer accuracy, faithfulness and refusal of unanswerable questions; the offline baseline scores 1.00 hit@5, 0.96 answer accuracy and 0% hallucination, enforced as a CI gate.</li>
+    <li>Served through a streaming FastAPI API (SSE, file upload, API-key auth), containerised with Docker; 46 automated tests.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="head"><span class="title">Text-to-SQL Analytics Agent</span><a class="right gh-link" href="https://github.com/rahuldahiya67/text-to-sql-agent"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>GitHub</a></div>
+  <div class="sub">Python, PostgreSQL, SQLite, MongoDB, sqlglot, LLM tool-calling, FastAPI, Streamlit</div>
+  <ul>
+    <li>Built an agent that turns plain-English business questions into SQL, results, charts and a summary, with follow-up questions ("now split that by region") resolved from MongoDB conversation memory.</li>
+    <li>Made it safe for real databases: sqlglot syntax-tree checks (SELECT-only, table allow-list, enforced LIMIT), read-only connections, statement timeouts, and LLM self-correction from database errors.</li>
+    <li>Defined metrics once in a YAML semantic layer that also blocks double-counting joins; reached 24/24 execution accuracy against hand-written gold SQL on both SQLite and PostgreSQL; 71 tests.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="head"><span class="title">AI Integration Agent <span class="note">(MCP server and REST API orchestration)</span></span><a class="right gh-link" href="https://github.com/rahuldahiya67/ai-integration-agent-mcp"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>GitHub</a></div>
+  <div class="sub">Python, MCP Python SDK, FastAPI, httpx, OAuth2, webhooks, SQLite, Docker</div>
+  <ul>
+    <li>Built a support copilot that resolves tickets end to end across order, helpdesk and email APIs, triggered by HMAC-signed webhooks with replay protection and de-duplication.</li>
+    <li>Engineered a resilient API layer: API-key, OAuth2 client-credentials and bearer auth, token-bucket rate limiting, exponential backoff honouring Retry-After, and idempotency keys so a lost response never causes a double refund.</li>
+    <li>Exposed the integrations as an MCP server (9 tools, resources, prompt) sharing one tool registry with customer-scoped permissions, human approval for high-risk actions and a PII-masked audit log; 59 tests.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="head"><span class="title">Data &amp; AI Lab <span class="note">(supply chain and operations analytics projects)</span></span><a class="right gh-link" href="https://github.com/rahuldahiya67/data-ai-lab"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>GitHub</a></div>
+  <div class="sub">Python, pandas, NumPy, PyYAML, pytest, GitHub Actions</div>
+  <ul>
+    <li>Build each project over three days the way a team works: plan issue, pull request, code review, issues for findings, fixes with tests, CI, then merge.</li>
+<!-- LAB-PROJECTS:START -->
+    <li><b>Carrier Feed Contract Checker:</b> validates carrier shipment feeds against a YAML data contract, quarantines bad rows with the rule they broke and gates the load on reject rate; caught all 428 injected defects in a 5,000-row test feed with no false rejects; 68 tests.</li>
+    <li><b>Intermittent Demand Forecaster:</b> classifies spare-parts demand (ADI / CV²), backtests Croston, SBA and TSB per SKU and sets reorder points at a target service level; cut error on intermittent SKUs from 0.80 to 0.63 RMSSE against a naive forecast; 69 tests.</li>
+<!-- LAB-PROJECTS:END -->
+  </ul>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <p><b>Programming &amp; Data:</b> Python (Pandas, NumPy), SQL, ETL pipelines, data modelling, data contracts and data quality checks, EDA, Google Apps Script, Node.js</p>
+  <p><b>Databases:</b> PostgreSQL, MongoDB (Atlas Vector Search), Snowflake</p>
+  <p><b>GenAI &amp; ML:</b> RAG, LLM tool-calling agents, MCP, prompt engineering, LLM evaluation, LangChain, FAISS, OpenAI and Claude APIs, scikit-learn, forecasting (including intermittent demand)</p>
+  <p><b>APIs &amp; Deployment:</b> FastAPI, Flask, REST API integration, Streamlit, Docker, Kubernetes, AWS, Git</p>
+  <p><b>BI &amp; Reporting:</b> Power BI, Power Query, DAX, Advanced Excel, Google Sheets, KPI design</p>
+  <p><b>Domain:</b> SAP (SD/MM data extraction), dispatch planning, transport management, freight cost analysis, inventory audit; LLM training data work (rubric writing, response rating, safety evals)</p>
+</div>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="head"><span class="title">M.Sc. Computer Science (Data Analytics)</span><span class="right">2022 – 2024</span></div>
+  <div>Kerala University of Digital Sciences, Innovation and Technology, Thiruvananthapuram</div>
+</div>
+</body>
+</html>

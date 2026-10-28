@@ -134,6 +134,7 @@
 <!-- LAB-PROJECTS:START -->
     <li><b>Carrier Feed Contract Checker:</b> validates carrier shipment feeds against a YAML data contract, quarantines bad rows with the rule they broke and gates the load on reject rate; caught all 428 injected defects in a 5,000-row test feed with no false rejects; 68 tests.</li>
     <li><b>Intermittent Demand Forecaster:</b> classifies spare-parts demand (ADI / CV²), backtests Croston, SBA and TSB per SKU and sets reorder points at a target service level; cut error on intermittent SKUs from 0.80 to 0.63 RMSSE against a naive forecast; 69 tests.</li>
+    <li><b>SOP Retrieval Benchmark:</b> scores retrieval over site-specific warehouse SOPs (BM25, query expansion, site filter) on 315 labelled questions with recall@k, MRR and a wrong-site rate; showed a synonym glossary that lifted paraphrase recall@5 from 0.48 to 0.91 lowered it on held-out wording (0.70 to 0.60); 71 tests.</li>
 <!-- LAB-PROJECTS:END -->
   </ul>
 </div>
@@ -142,7 +143,7 @@
 <div class="skills">
   <p><b>Programming &amp; Data:</b> Python (Pandas, NumPy), SQL, ETL pipelines, data modelling, data contracts and data quality checks, EDA, Google Apps Script, Node.js</p>
   <p><b>Databases:</b> PostgreSQL, MongoDB (Atlas Vector Search), Snowflake</p>
-  <p><b>GenAI &amp; ML:</b> RAG, LLM tool-calling agents, MCP, prompt engineering, LLM evaluation, LangChain, FAISS, OpenAI and Claude APIs, scikit-learn, forecasting (including intermittent demand)</p>
+  <p><b>GenAI &amp; ML:</b> RAG, LLM tool-calling agents, MCP, prompt engineering, LLM evaluation, retrieval evaluation (BM25, recall@k, MRR), LangChain, FAISS, OpenAI and Claude APIs, scikit-learn, forecasting (including intermittent demand)</p>
   <p><b>APIs &amp; Deployment:</b> FastAPI, Flask, REST API integration, Streamlit, Docker, Kubernetes, AWS, Git</p>
   <p><b>BI &amp; Reporting:</b> Power BI, Power Query, DAX, Advanced Excel, Google Sheets, KPI design</p>
   <p><b>Domain:</b> SAP (SD/MM data extraction), dispatch planning, transport management, freight cost analysis, inventory audit; LLM training data work (rubric writing, response rating, safety evals)</p>

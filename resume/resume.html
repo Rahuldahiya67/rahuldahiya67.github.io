@@ -128,21 +128,21 @@
 </div>
 <div class="entry">
   <div class="head"><span class="title">Data &amp; AI Lab <span class="note">(supply chain and operations analytics projects)</span></span><a class="right gh-link" href="https://github.com/rahuldahiya67/data-ai-lab"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>GitHub</a></div>
-  <div class="sub">Python, pandas, NumPy, PyYAML, pytest, GitHub Actions</div>
+  <div class="sub">Python, pandas, NumPy, DuckDB, SQL, PyYAML, pytest, GitHub Actions</div>
   <ul>
     <li>Build each project over three days the way a team works: plan issue, pull request, code review, issues for findings, fixes with tests, CI, then merge.</li>
 <!-- LAB-PROJECTS:START -->
-    <li><b>Carrier Feed Contract Checker:</b> validates carrier shipment feeds against a YAML data contract, quarantines bad rows with the rule they broke and gates the load on reject rate; caught all 428 injected defects in a 5,000-row test feed with no false rejects; 68 tests.</li>
     <li><b>Intermittent Demand Forecaster:</b> classifies spare-parts demand (ADI / CV²), backtests Croston, SBA and TSB per SKU and sets reorder points at a target service level; cut error on intermittent SKUs from 0.80 to 0.63 RMSSE against a naive forecast; 69 tests.</li>
     <li><b>SOP Retrieval Benchmark:</b> scores retrieval over site-specific warehouse SOPs (BM25, query expansion, site filter) on 315 labelled questions with recall@k, MRR and a wrong-site rate; showed a synonym glossary that lifted paraphrase recall@5 from 0.48 to 0.91 lowered it on held-out wording (0.70 to 0.60); 71 tests.</li>
+    <li><b>Rate Card History Loader:</b> loads an at-least-once CDC stream of carrier rate changes into an SCD Type 2 table in DuckDB with an LSN watermark, applied-event ledger and quarantine, then re-rates invoices at the rate valid on the ship date; a replayed batch changed nothing and all 21 planted billing errors were found with no false flags; 83 tests.</li>
 <!-- LAB-PROJECTS:END -->
   </ul>
 </div>
 
 <h2>Skills</h2>
 <div class="skills">
-  <p><b>Programming &amp; Data:</b> Python (Pandas, NumPy), SQL, ETL pipelines, data modelling, data contracts and data quality checks, EDA, Google Apps Script, Node.js</p>
-  <p><b>Databases:</b> PostgreSQL, MongoDB (Atlas Vector Search), Snowflake</p>
+  <p><b>Programming &amp; Data:</b> Python (Pandas, NumPy), SQL, ETL pipelines, CDC and SCD Type 2 loading, data modelling, data contracts and data quality checks, EDA, Google Apps Script, Node.js</p>
+  <p><b>Databases:</b> PostgreSQL, DuckDB, MongoDB (Atlas Vector Search), Snowflake</p>
   <p><b>GenAI &amp; ML:</b> RAG, LLM tool-calling agents, MCP, prompt engineering, LLM evaluation, retrieval evaluation (BM25, recall@k, MRR), LangChain, FAISS, OpenAI and Claude APIs, scikit-learn, forecasting (including intermittent demand)</p>
   <p><b>APIs &amp; Deployment:</b> FastAPI, Flask, REST API integration, Streamlit, Docker, Kubernetes, AWS, Git</p>
   <p><b>BI &amp; Reporting:</b> Power BI, Power Query, DAX, Advanced Excel, Google Sheets, KPI design</p>

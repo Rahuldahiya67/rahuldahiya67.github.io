@@ -132,9 +132,9 @@
   <ul>
     <li>Build each project over three days the way a team works: plan issue, pull request, code review, issues for findings, fixes with tests, CI, then merge.</li>
 <!-- LAB-PROJECTS:START -->
-    <li><b>Intermittent Demand Forecaster:</b> classifies spare-parts demand (ADI / CV²), backtests Croston, SBA and TSB per SKU and sets reorder points at a target service level; cut error on intermittent SKUs from 0.80 to 0.63 RMSSE against a naive forecast; 69 tests.</li>
     <li><b>SOP Retrieval Benchmark:</b> scores retrieval over site-specific warehouse SOPs (BM25, query expansion, site filter) on 315 labelled questions with recall@k, MRR and a wrong-site rate; showed a synonym glossary that lifted paraphrase recall@5 from 0.48 to 0.91 lowered it on held-out wording (0.70 to 0.60); 91 tests.</li>
     <li><b>Rate Card History Loader:</b> loads an at-least-once CDC stream of carrier rate changes into an SCD Type 2 table in DuckDB with an LSN watermark, applied-event ledger and quarantine, then re-rates invoices at the rate valid on the ship date; a replayed batch changed nothing and all 21 planted billing errors were found with no false flags; 88 tests.</li>
+    <li><b>Delivery Exception Triage Agent:</b> tool-calling agent for delivery exception tickets with typed tool-argument checks, policy guardrails run before every refund, reship or redelivery, and fallback escalation for blocked actions, planner failures and step-budget overruns; resolved all 300 sample tickets correctly (from 97.7%) and 17 of 20 held-out messages; 129 tests.</li>
 <!-- LAB-PROJECTS:END -->
   </ul>
 </div>
@@ -143,7 +143,7 @@
 <div class="skills">
   <p><b>Programming &amp; Data:</b> Python (Pandas, NumPy), SQL, ETL pipelines, CDC and SCD Type 2 loading, data modelling, data contracts and data quality checks, EDA, Google Apps Script, Node.js</p>
   <p><b>Databases:</b> PostgreSQL, DuckDB, MongoDB (Atlas Vector Search), Snowflake</p>
-  <p><b>GenAI &amp; ML:</b> RAG, LLM tool-calling agents, MCP, prompt engineering, LLM evaluation, retrieval evaluation (BM25, recall@k, MRR), LangChain, FAISS, OpenAI and Claude APIs, scikit-learn, forecasting (including intermittent demand)</p>
+  <p><b>GenAI &amp; ML:</b> RAG, LLM tool-calling agents and guardrails, MCP, prompt engineering, LLM evaluation, retrieval evaluation (BM25, recall@k, MRR), LangChain, FAISS, OpenAI and Claude APIs, scikit-learn, forecasting (including intermittent demand)</p>
   <p><b>APIs &amp; Deployment:</b> FastAPI, Flask, REST API integration, Streamlit, Docker, Kubernetes, AWS, Git</p>
   <p><b>BI &amp; Reporting:</b> Power BI, Power Query, DAX, Advanced Excel, Google Sheets, KPI design</p>
   <p><b>Domain:</b> SAP (SD/MM data extraction), dispatch planning, transport management, freight cost analysis, inventory audit; LLM training data work (rubric writing, response rating, safety evals)</p>

@@ -132,16 +132,16 @@
   <ul>
     <li>Build each project over three days the way a team works: plan issue, pull request, code review, issues for findings, fixes with tests, CI, then merge.</li>
 <!-- LAB-PROJECTS:START -->
-    <li><b>Rate Card History Loader:</b> loads an at-least-once CDC stream of carrier rate changes into an SCD Type 2 table in DuckDB with an LSN watermark, applied-event ledger and quarantine, then re-rates invoices at the rate valid on the ship date; a replayed batch changed nothing and all 21 planted billing errors were found with no false flags; 89 tests.</li>
     <li><b>Delivery Exception Triage Agent:</b> tool-calling agent for delivery exception tickets with typed tool-argument checks, policy guardrails run before every refund, reship or redelivery, and fallback escalation for blocked actions, planner failures and step-budget overruns; resolved all 300 sample tickets correctly (from 97.7%) and 17 of 20 held-out messages; 129 tests.</li>
     <li><b>Dispatch Metrics Layer:</b> semantic layer that defines dispatch KPIs (on-time rate, OTIF, cost per km) once in YAML and compiles any grouping, filter and time grain into one parameterised DuckDB query, with checks for duplicate fact rows and join fan-out; a reconcile report showed on-time over dispatched instead of delivered shipments is 1.6 points lower overall and 23.3 points lower in the latest week; 93 tests.</li>
+    <li><b>Stalled Shipment Stream Monitor:</b> flags shipments that stop scanning from a late, out-of-order and duplicated tracking stream using an event-time watermark, a deadline heap, retractions for alerts a late scan disproves, and a dead-letter list for malformed rows; caught every confirmable planted stall, and two hours of allowed lateness raised precision from 0.810 to 0.904 for about two hours of extra detection delay; 79 tests.</li>
 <!-- LAB-PROJECTS:END -->
   </ul>
 </div>
 
 <h2>Skills</h2>
 <div class="skills">
-  <p><b>Programming &amp; Data:</b> Python (Pandas, NumPy), SQL, ETL pipelines, CDC and SCD Type 2 loading, data modelling, data contracts and data quality checks, EDA, Google Apps Script, Node.js</p>
+  <p><b>Programming &amp; Data:</b> Python (Pandas, NumPy), SQL, ETL pipelines, CDC and SCD Type 2 loading, event-time stream processing, data modelling, data contracts and data quality checks, EDA, Google Apps Script, Node.js</p>
   <p><b>Databases:</b> PostgreSQL, DuckDB, MongoDB (Atlas Vector Search), Snowflake</p>
   <p><b>GenAI &amp; ML:</b> RAG, LLM tool-calling agents and guardrails, MCP, prompt engineering, LLM evaluation, retrieval evaluation (BM25, recall@k, MRR), LangChain, FAISS, OpenAI and Claude APIs, scikit-learn, forecasting (including intermittent demand)</p>
   <p><b>APIs &amp; Deployment:</b> FastAPI, Flask, REST API integration, Streamlit, Docker, Kubernetes, AWS, Git</p>
